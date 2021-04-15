@@ -1,0 +1,73 @@
+<!--
+    Lucas Gabriel de Araújo dos Santos
+    Matheus Campos de Souza
+    1ºDSN
+    PWI
+-->
+
+<!--Define a versão do HTML-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Questão 4</title>
+
+    <style>
+        body{
+            background-color: thistle;
+        }
+    </style>
+
+    <script>
+        //Exibindo alerta para o usuário
+        alert("Bem vindo a calculadora do Lucas e do Mathues!\nVamos prosseguir?");
+
+        //Declarando as variáveis
+        let num1,num2,operacao,soma,sub,mult,div;
+
+        //pedindo os numeros atravéz do prompt
+        num1=parseFloat(prompt("Digite o primeiro número para a operação","Digite aqui"));
+        num2=parseFloat(prompt("Digite o segundo número para a operação","Digite aqui"));
+
+        //Calculando as operações
+        soma= num1+num2;
+        sub= num1-num2;
+        mult= num1*num2;
+        div= num1/num2;
+
+        //pedindo a operacao 
+        operacao=parseInt(prompt("Escolha a operação, \n Soma=1 \n Subtração=2 \n Multiplicação=3 \n Divisão=4 \n ","Digite o número da operação"));
+
+        //Obtendo as respostas
+        switch (operacao){
+            case 1: 
+            document.write("A soma entre "+num1+" mais "+num2+" é:  "+soma+"!");
+            break;
+
+            case 2: 
+            document.write("A subtração entre "+num1+" menos "+num2+" é: "+sub+"!");
+            break;
+
+            case 3: 
+            document.write("A multiplicação entre "+num1+" vezes "+num2+" é:  "+mult+"!");
+            break;
+
+            case 4:
+                if (num2==0){
+                    document.write("Não existe divisão por zero, pressione F5 e insira outro valor!");
+                } else if (num1==0){
+                    document.write("Não existe divisão por zero, pressione F5 e insira outro valor!");
+                } else{
+                    document.write("A divisão entre "+num1+" dividido por "+num2+" é: "+div+"!<br>");
+                }
+            break;
+    
+            default:
+            document.write("Não é possível realizar o cálculo, pois nenhuma das operações disponíveis foi selecionada");
+        }
+        
+    </script>
+</head>
+<body>
+</body>
+</html>

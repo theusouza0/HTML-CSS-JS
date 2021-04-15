@@ -1,0 +1,112 @@
+<!--
+    Lucas Gabriel de Araújo dos Santos
+    Matheus Campos de Souza
+    1ºDSN
+    PWI
+-->
+
+<!--Define a versão do HTML-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Questão 5</title>
+    <style>
+        body{
+            background-color: chartreuse;
+        }
+    </style>
+    <script>
+        //Declarando variáveis
+        let opcao, celsius, fahrenheit, kelvin, resultado, num1, fk, kf;
+
+        //Exibindo alerta para o usuário
+        alert("Bem vindo a calculadora de temperaturas!\nVamos prosseguir?");
+        
+        //obtendo dados com o prompt
+        opcao=parseInt(prompt("Escolha qual a conversão que queira fazer!\n1-Celsius para fahrenheit\n2-Fahrenheit para Celsius\n3-Celsius para kelvin\n4-Kelvin para Celsius\n5-Fahrenheit para kelvin\n6-Kelvin para Fahrenheit\n(obs: celsius = ºC   fahrenheit = ºF    kelvin = K)","Digite aqui"));
+
+        //Estrutura de decisão
+        switch (opcao){
+            case 1:
+                //Entrada
+                alert("A opção escolhida foi a 1ª");
+                celsius=parseFloat(prompt("Digite a temperatura para conversão de ºC para ºF","Digite aqui"));
+
+                //Cálculos
+                resultado = (9*celsius+160)/5;
+
+                //Saída
+                alert("A temperatura ºC para ºF é de: " +resultado.toFixed(2));
+                break;
+
+            case 2:
+                //Entrada
+                alert("A opção escolhida foi a 2ª");
+                fahrenheit=parseFloat(prompt("Digite a temperatura para conversão de ºF para ºC","Digite aqui"));
+
+                //Cálculos
+                resultado = (fahrenheit-32)*(5/9);
+
+                //Saída
+                alert("A temperatura ºF para ºC é de: " +resultado.toFixed(2));
+                break;
+
+            case 3:
+                //Entrada
+                alert("A opção escolhida foi a 3ª");
+                celsius=parseFloat(prompt("Digite a temperatura para a conversão de ºC para K","Digite aqui"));
+
+                //Cálculos
+                resultado = celsius + 273;
+
+                //Saída
+                alert("A temperatura de ºC para K é de: " +resultado.toFixed(2));
+                break;
+            
+            case 4:
+                //Entrada
+                alert("A opção escolhida foi a 4ª");
+                kelvin=parseFloat(prompt("Digite a temperatura para a conversão de K para ºC","Digite aqui"));
+
+                //Cálculos
+                resultado = kelvin - 273;
+
+                //Saída
+                alert("A temperatura de K para ºC é de: " +resultado.toFixed(2));
+                break;
+            
+            case 5:
+                //Entrada
+                alert("A opção escolhida foi a 5ª");
+                fahrenheit=parseFloat(prompt("Digite a temperatura para a conversão de ºF para K"));
+
+                //Cálculos
+                fk = (fahrenheit-32)*(5/9);
+                resultado = fk + 273;
+
+                //Saída
+                alert("A temperatura de ºF para K é de: " +resultado.toFixed(2));
+                break;
+
+            case 6:
+                //Entrada
+                alert("A opção escolhida foi a 6ª");
+                kelvin=parseFloat(prompt("Digite a temperatura para a conversão de K para ºF"));
+
+                //Cálculos
+                kf = kelvin - 273;
+                resultado = (9*kf+160)/5;
+
+                //Saída
+                alert("A temperatura de K para ºF é de: " +resultado.toFixed(2));
+                break;
+
+            default:
+                alert("Digite alguma das opções, por favor!");
+        }
+    </script>
+</head>
+<body>
+</body>
+</html>

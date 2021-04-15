@@ -1,0 +1,39 @@
+<!--
+    Lucas Gabriel de Araújo dos Santos
+    Matheus Campos de Souza
+    1ºDSN
+    PWI
+-->
+
+<!--Define a versão do HTML-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Questão 3</title>
+
+    <style>
+        body{
+            background-color: teal;
+        }
+    </style>
+
+    <script>
+        //Declarando variáveis
+        let raio, pi, A, m, mm, num;
+
+        //Obtendo dados com o prompt
+        num=parseFloat(prompt("Digite o valor do raio:\n(obs: r*2= d   e   d/2= r)\nDigite os valores em uma única unidade de medida (ex: cm → cm)","Digite aqui"));
+
+        //Cálculos
+        raio=Math.pow(num,2);
+        pi=Math.PI;
+        A= raio*pi;
+        
+        //Escrevendo no documento
+        document.write("O valor da área é de: "+A.toFixed(2)+"<br>");
+    </script>
+</head>
+<body>
+</body>
+</html>

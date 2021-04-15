@@ -1,0 +1,60 @@
+<!--
+    Lucas Gabriel de Araújo dos Santos
+    Matheus Campos de Souza
+    1ºDSN
+    PWI
+-->
+
+<!--Define a versão do HTML-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Questão 6</title>
+    
+    <style>
+        body{
+            background-color: black;
+            color: white;
+        }
+    </style>
+
+</head>
+
+<body>
+    <script>
+        //caixa de alerta
+        alert ('Vamos calcular sua média');
+
+        //Declarando as variáveis
+        let nota1, nota2, nota3, nota4, media;
+
+        //pedindo as notas através do prompt
+        nota1=parseFloat (prompt('Digite sua nota na disciplina de matemática','Digite aqui'));
+        nota2=parseFloat (prompt('Digite sua nota na disciplina de português','Digite aqui'));
+        nota3=parseFloat (prompt('Digite sua nota na disciplina de geografia','Digite aqui'));
+        nota4=parseFloat (prompt('Digite sua nota na disciplina de história','Digite aqui'));
+
+        //Obtendo a média
+        media= (nota1+nota2+nota3+nota4)/4;
+        document.write('Nota de matemática: ' +nota1+ '<br>');
+        document.write('Nota de português: ' +nota2+ '<br>');
+        document.write('Nota de geografia: ' +nota3+ '<br>');
+        document.write('Nota de história: ' +nota4+ '<br>');
+        document.write('--------------------------------- <br>');
+        document.write('Sua média final foi ' +media.toFixed(1)+ '<br>');
+ 
+            
+        //Obtendo a situação do aluno
+            if (media>=7) {//Media maior ou igual a 7
+            document.write("<span style='color:green'><strong>Parabéns você está aprovado");
+            }
+            else if (media<5) {//caso a media for menor que 5
+            document.write("<span style='color:red'><strong>Infelizmente você está reprovado.");
+            }
+            else {//Caso nao for nenhuma das opções anteriores
+            document.write("<span style='color:yellow'><strong>Você está de recuperação.");
+            }
+    </script>
+</body>
+</html>
