@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprendendo jQuery</title>
+    <style>
+        /* CSS para dar uma customizada */
+        body{
+            background-color: palevioletred;
+            background-image: radial-gradient(circle, palevioletred, white);
+        }
+        input{
+            width: 50%;
+            height: 20px;
+            font-weight: 900;
+            background-color: gainsboro;
+            border-radius: 15px;
+            border-style: double;
+            border-color: brown;
+            font-size: 15px;
+        }
+        #btCalc{
+            width: 20%;
+            height: 50px;
+            background-color: black;
+            color: crimson;
+            font-weight: 900;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        #reset{
+            width: 20%;
+            height: 50px;
+            background-color: black;
+            color: crimson;
+            font-weight: 900;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        p{
+            font-weight: 900;
+            font-size: 25px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+    </style>
+    <script src="../jquery-3.6.0.min.js"></script>
+    <script>
+        var nome = prompt("Digite seu nome aqui: ","Digite aqui...");
+
+        //Função para fazer o cálculo da média
+        $(document).ready(function(){
+            $('#btCalc').click(function(){
+                var nota1 = parseFloat($('#n1').val())
+                var nota2 = parseFloat($('#n2').val())
+                var media = (nota1+nota2)/2
+                
+                //Estrutura de decisão
+                if(media >= 7){
+                    $('#media').val("O aluno "+nome+" está aprovado!  A média foi: "+media)
+                    $('#media').css("color", "green")
+
+                }else if(media < 7 && media >= 5){
+                    $('#media').val("O aluno "+nome+" está de recuperação!  A média foi: "+media)
+                    $('#media').css("color", "orange")
+
+                }else{
+                    $('#media').val("O aluno "+nome+" foi reprovado!  A média foi: "+media);
+                    $('#media').css("color", "red")
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <form id="formMedia">
+        <p>Nota 1: </p>
+        <input type="number" id="n1" required>
+
+        <p>Nota 2: </p>
+        <input type="number" id="n2" required>
+
+        <p>Média: </p>
+        <input type="text" id="media" disabled><br><br>
+        <input type="button" id="btCalc" value="Calcular">
+        <input type="submit" id="reset" value="Reset">
+    </form>
+</body>
+</html>
