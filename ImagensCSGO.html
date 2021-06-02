@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 2</title>
+    <script src="../jquery-3.6.0.min.js"> </script>
+    <style>
+        img{
+            width: 300px;
+            height: 200px;
+            margin-left: 10px;
+            box-shadow: 10px 8px 30px #000;
+            border-radius: 3%;
+            margin-top: 50px;
+        }
+        h1 {color: azure; font-family: cursive;}
+        
+        body {background-color:#1C1C1C;}
+    </style>
+    <script>
+        $(document).ready(function(){
+            $("#karambit").fadeTo(1000, 0.3)
+            $("#m9").fadeTo(1000, 0.3)
+            $("#borboleta").fadeTo(1000, 0.3)
+            $("#invisivel").fadeTo(1000, 0.3)
+
+            $("#karambit").mouseenter(function(){
+                $("#karambit").fadeTo(700, 1)
+            }).mouseleave(function(){
+                $("#karambit").fadeTo(300, 0.3)
+            });
+
+            $("#m9").mouseenter(function(){
+                $("#m9").fadeTo(700, 1)
+            }).mouseleave(function(){
+                $("#m9").fadeTo(300, 0.3)
+            });
+            
+            $("#borboleta").mouseenter(function(){
+                $("#borboleta").fadeTo(700, 1)
+            }).mouseleave(function(){
+                $("#borboleta").fadeTo(300, 0.3)
+            });
+
+            $("#invisivel").mouseenter(function(){
+                $("#invisivel").fadeTo(700, 1)
+            }).mouseleave(function(){
+                $("#invisivel").fadeTo(300, 0.3)
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>Passe o Mouse em qualquer imagem!</h1>
+    <img id="karambit" src="karambit1.jpg">
+    <img id="m9" src="m9.jpg">
+    <img id="borboleta" src="borboleta.jpeg">
+    <img id="invisivel" src="invisivel.jpeg">
+</body>
+</html>
